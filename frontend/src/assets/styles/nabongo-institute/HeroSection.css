@@ -1,0 +1,111 @@
+@import "../nabongo-institute/index.css";
+
+/* ==========================
+   Base Utility Classes
+============================= */
+.btn {
+  padding: 0.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: var(--text--primary);
+  color: var(--bg--primary);
+}
+
+.btn--primary .btn__icon {
+  background-color: var(--bg--primary);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: none;
+}
+
+.btn--secondary {
+  background-color: var(--bg--primary);
+  border: 1px solid var(--border--primary);
+}
+
+/* ==========================
+   Hero Section Layout
+============================= */
+#hero {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+@media (max-width: 661px) {
+  #hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================
+   Hero Left Content
+============================= */
+.hero__content {
+  position: relative;
+}
+
+.hero__section-label {
+  font-size: 0.9rem;
+  border: 1px solid var(--border--primary);
+  width: fit-content;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.hero__title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hero__description {
+  font-size: 1rem;
+  color: var(--text--secondary);
+  margin-bottom: 5rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 0.6rem;
+  position: absolute;
+  bottom: 3rem;
+}
+
+@media (max-width: 661px) {
+  .hero__actions {
+    bottom: 0.5rem;
+  }
+}
+
+/* ==========================
+   Hero Right Images
+============================= */
+.hero__images {
+  height: 30rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.9fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hero__images img {
+  border-radius: 15px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__images :nth-child(1) {
+  grid-column: span 2;
+}

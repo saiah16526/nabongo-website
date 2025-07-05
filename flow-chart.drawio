@@ -1,0 +1,65 @@
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="V08EH8H36pKFnjfon2Mv">
+        <mxGraphModel dx="1484" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="q5fqE2sdLHYFamu7BxSC-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="q5fqE2sdLHYFamu7BxSC-1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="320" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="q5fqE2sdLHYFamu7BxSC-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="q5fqE2sdLHYFamu7BxSC-1" target="q5fqE2sdLHYFamu7BxSC-10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="175" y="420" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="q5fqE2sdLHYFamu7BxSC-1" value="Nabongo Institute" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="90" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="q5fqE2sdLHYFamu7BxSC-4" value="Vertical Container" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="50" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="q5fqE2sdLHYFamu7BxSC-5" value="home&lt;div&gt;institues&lt;/div&gt;&lt;div&gt;about us&lt;/div&gt;&lt;div&gt;news &amp;amp; updates&lt;/div&gt;&lt;div&gt;&lt;div&gt;community (sign in)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;(juiior &amp;amp; ttc)&lt;/div&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="80" width="200" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="q5fqE2sdLHYFamu7BxSC-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="q5fqE2sdLHYFamu7BxSC-10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="390" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="220" y="430"/>
+                            <mxPoint x="220" y="430"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="q5fqE2sdLHYFamu7BxSC-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="q5fqE2sdLHYFamu7BxSC-10" target="q5fqE2sdLHYFamu7BxSC-14" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="230" y="610" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="220" y="575"/>
+                            <mxPoint x="231" y="575"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="q5fqE2sdLHYFamu7BxSC-10" value="" style="triangle;whiteSpace=wrap;html=1;direction=west;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="460" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="q5fqE2sdLHYFamu7BxSC-13" value="nabongo ttc" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="365" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="q5fqE2sdLHYFamu7BxSC-14" value="nabongo junior academy" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="580" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="q5fqE2sdLHYFamu7BxSC-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="q5fqE2sdLHYFamu7BxSC-15" target="q5fqE2sdLHYFamu7BxSC-13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="q5fqE2sdLHYFamu7BxSC-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="q5fqE2sdLHYFamu7BxSC-15" target="q5fqE2sdLHYFamu7BxSC-14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="q5fqE2sdLHYFamu7BxSC-15" value="home&lt;div&gt;programs&lt;/div&gt;&lt;div&gt;student life&lt;/div&gt;&lt;div&gt;teams&lt;/div&gt;&lt;div&gt;addmissions&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;contact us&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;faq&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="400" width="270" height="270" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

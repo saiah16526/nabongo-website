@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ==========================
+   Global Variables
+============================= */
+:root {
+  --bg--primary: #f5f7fa;          /* clean, soft background */
+  --text--primary: #111827;        /* strong near-black for high contrast */
+  --text--secondary: #374151;      /* deeper gray-blue for subtitles */
+  --border--primary: #cbd5e1;      /* solid soft-gray border with clarity */
+
+  --card: #ffffff;                 /* clean white card */
+  --card--active: #e0f2fe;         /* subtle blue for active state */
+}
+
+
+
+
+
+/* ==========================
+   Reset & Base Styles
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+/* ==========================
+   Layout
+============================= */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  background-color: var(--bg--primary);
+}
+
+body {
+  max-width: 1200px;
+  padding: 0 5vw;
+  margin: 0 auto;
+}
