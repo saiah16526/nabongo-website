@@ -1,5 +1,5 @@
 import logo from "../../assets/images/example.jpg";
-import "../../assets/styles/nabongo-institute/HeroSection.css";
+import styles from "../../assets/styles/nabongo-institute/HeroSection.module.css";
 
 const heroImages = [
   { id: 1, alt: "Visual 1", src: logo },
@@ -9,31 +9,33 @@ const heroImages = [
 
 function HeroSection() {
   return (
-    <section id="hero">
+    <section className={styles.hero}>
       {/* Left Content Area */}
-      <article className="hero__content">
-        <div className="hero__section-label">Home</div>
-        <h1 className="hero__title">
+      <article className={styles.hero__content}>
+        <div className={styles.hero__section_label}>Home</div>
+        <h1 className={styles.hero__title}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur
         </h1>
-        <p className="hero__description">
+        <p className={styles.hero__description}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur sunt,
           dolores voluptates neque optio expedita ut consequuntur possimus natus quo, aliquid
           quidem illum numquam nemo magnam officiis minima sit.
         </p>
 
         {/* CTA Buttons */}
-        <div className="hero__actions">
-          <button className="btn btn--primary">
+        <div className={styles.hero__actions}>
+          <button className={`${styles.hero__btn} ${styles.hero__btn_primary}`}>
             Get started today
-            <span className="btn__icon" />
+            <span className={styles.hero__btn_icon} />
           </button>
-          <button className="btn btn--secondary">How it works</button>
+          <button className={`${styles.hero__btn} ${styles.hero__btn_secondary}`}>
+            How it works
+          </button>
         </div>
       </article>
 
       {/* Right Visual Area */}
-      <div className="hero__images">
+      <div className={styles.hero__images}>
         {heroImages.map(({ id, alt, src }) => (
           <img key={id} src={src} alt={alt} />
         ))}

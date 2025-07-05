@@ -1,33 +1,26 @@
-import logo from "../../assets/images/example.jpg"
-
+import styles from "../../assets/styles/nabongo-ttc/NavigationBar.module.css"
+import logo from "../../assets/images/example.jpg";
 
 function NavigationBar() {
-    return(
-        <>
-        <nav id="navigation2">
-            {/* Brand Name & Logo */}
-            <div className="brand">
-                <img className="logo"  src={logo} alt="" />
-                <div className="name" >Company Name</div>
+    return (
+        <nav id="main-navigation" className={styles.main_navigation}>
+            <div className={styles.nav_brand}>
+                <img className={styles.nav_logo} src={logo} alt="Company Logo" />
+                <span className={styles.nav_brand_name}>Company Name</span>
             </div>
 
-            {/* Navigation Links */}
-            <ul className="nav-btns">
-                <li className="nav-btn"> <img src={logo} alt="" /> home</li>
-                <li className="nav-btn"> <img src={logo} alt="" /> Programs</li>
-                <li className="nav-btn"> <img src={logo} alt="" /> Student Life</li>
-                <li className="nav-btn"> <img src={logo} alt="" /> Team</li>
+            <ul className={styles.nav_links}>
+                <li className={styles.nav_link_item}>Home</li>
+                <li className={styles.nav_link_item}>Programs</li>
+                <li className={styles.nav_link_item}>Student Life</li>
+                <li className={styles.nav_link_item}>Team</li>
             </ul>
 
-            {/* Extras */}
-            <div className="nav-panel-btn">
-                <button>Contact us</button>
+            <div className={styles.nav_cta}>
+                <button className={styles.nav_contact_btn}>Contact Us</button>
             </div>
-             
-
         </nav>
-        </>
-    )
+    );
 }
 
-export default NavigationBar
+export default NavigationBar;

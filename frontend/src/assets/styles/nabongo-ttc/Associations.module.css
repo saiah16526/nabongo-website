@@ -1,0 +1,69 @@
+.associations_section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* Header */
+.associations_header {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.associations_title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text--primary);
+  margin-bottom: 1rem;
+}
+
+.associations_description {
+  font-size: 1rem;
+  color: var(--text--secondary);
+  line-height: 1.6;
+}
+
+/* Association List */
+.associations_list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Association Card */
+.association_card {
+  background-color: var(--bg--primary);
+  padding: 1.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.association_card:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon */
+.association_icon {
+  font-size: 2rem;
+  color: var(--text--primary);
+  transition: color 0.25s ease;
+}
+
+/* Name Text */
+.association_name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text--primary);
+  transition: color 0.25s ease;
+}
+

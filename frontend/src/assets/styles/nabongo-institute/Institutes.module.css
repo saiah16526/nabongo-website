@@ -1,0 +1,88 @@
+/* Removed global import */
+/* @import "../nabongo-institute/index.css"; */
+
+/* Section Container */
+.institute {
+  padding-top: 2rem;
+}
+
+/* Section Title and Intro */
+.institute__section_label {
+  font-size: 0.9rem;
+  border: 1px solid var(--border--primary);
+  width: fit-content;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.institute__heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.institute__description {
+  font-size: 1rem;
+  color: var(--text--secondary);
+  margin-bottom: 5rem;
+}
+
+/* Card Layout Grid */
+.institute__card_box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 661px) {
+  .institute__card_box {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card Item */
+.institute__card {
+  background-color: var(--bg--primary);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
+  position: relative;
+}
+
+.institute__image {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.institute__sub_title {
+  font-size: 1rem;
+  color: var(--text--secondary);
+  margin-block: 0.5rem;
+}
+
+.institute__title {
+  font-size: 1.5rem;
+  color: var(--text--primary);
+  margin-bottom: 0.5rem;
+}
+
+.institute__text {
+  color: var(--text--primary);
+  margin-bottom: 2rem;
+}
+
+.institute__button {
+  border-radius: 20px;
+  padding: 0.4rem 1.3rem;
+  border: 1px solid var(--border--primary);
+  background-color: var(--bg--primary);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.institute__button:hover {
+  background-color: var(--text--primary);
+  color: var(--bg--primary);
+}

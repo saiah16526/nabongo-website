@@ -1,0 +1,66 @@
+.team_section {
+  padding: 4rem 2rem;
+  background-color: var(--bg--primary);
+  text-align: center;
+}
+
+/* Title */
+.team_title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text--primary);
+  margin-bottom: 1rem;
+}
+
+.team_intro {
+  font-size: 1rem;
+  color: var(--text--secondary);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* Team Members Grid */
+.team_members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Individual Card */
+.team_member_card {
+  background-color: var(--card);
+  border: 1px solid #ddd;
+  border-radius: 0px 10px 10px;
+  width: 100%;
+  height: 330px;
+  max-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+/* Member Photo */
+.member_photo {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  object-position: 90%;
+}
+
+/* Member Info */
+.member_name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text--primary);
+  margin-block: 0.5rem;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.member_role {
+  font-size: 0.95rem;
+  color: var(--text--secondary);
+  text-align: left;
+  padding-left: 1rem;
+}

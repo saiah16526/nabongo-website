@@ -1,0 +1,86 @@
+.hero_section {
+    background-image: url(D:\nabongo-website\frontend\src\assets\images\example.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4vw 3vw;
+    margin-block: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+    height: 30rem;
+}
+
+.hero_subtitle {
+    font-size: 1rem;
+    color: var(--bg--primary);
+    margin-bottom: 0.5rem;
+    font-weight: 100;
+}
+
+.hero_title {
+    font-size: 2.5rem;
+    width: 300px;
+    font-weight: 100;
+    color: var(--bg--primary);
+}
+
+.hero_actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero_btn {
+    margin-top: 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn {
+    color: var(--bg--primary);
+    font-size: 0.8rem;
+    background-color: transparent;
+}
+
+.hero_highlights {
+    background-color: var(--bg--primary);
+    border-radius: 10px 0px;
+    position: absolute;
+    right: -1%;
+    bottom: -1%;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding-top: 2vw;
+    height: 8rem;
+}
+
+.highlight_box {
+    padding: 0rem 2vw;
+    width: 47%;
+}
+
+.highlight_value {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text--primary);
+    margin-bottom: 0.25rem;
+}
+
+.highlight_text {
+    font-size: 1rem;
+    color: var(--text--secondary);
+}
+
+/* Responsive */
+@media (max-width: 661px) {
+  .hero_highlights {
+    width: 75%;
+    height: 7rem;
+  }
+}

@@ -1,12 +1,21 @@
 import NavigationBar from "../components/nabongo-ttc/NavigationBar"
-import "../assets/styles/nabongo-ttc/index.css"
+import HeroSection from "../components/nabongo-ttc/HeroSection"
+import Assossiations from "../components/nabongo-ttc/Assossiations"
+import Programs from "../components/nabongo-ttc/Programs"
+import StudentLife from "../components/nabongo-ttc/StudentLife"
+import Team from "../components/nabongo-ttc/Team"
+import "../assets/styles/global.css"
 
 
 function NabongoTTC() {
     return (
         <>
-        saadwdadwda
         <NavigationBar/>
+        <HeroSection/>
+        <Assossiations/>
+        <Programs/>
+        <StudentLife/>
+        <Team/>
         </>
     )
 }
