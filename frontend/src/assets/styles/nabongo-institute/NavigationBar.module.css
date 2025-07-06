@@ -152,6 +152,16 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+
+  .navigation,
+.main_navigation
+{
+  width: 100vw;
+    position: relative;
+  transform: translate(-50%);
+  left: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
   .nav_links {
     display: none;
   }
