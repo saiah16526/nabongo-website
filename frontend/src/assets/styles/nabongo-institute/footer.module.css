@@ -1,0 +1,88 @@
+.footer {
+    background-color: var(--card);
+    width: 100vw;
+    font-size: 0.95rem;
+    position: relative;
+    transform: translate(-50%);
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerTop {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    align-items: start;
+    max-width: 1250px;
+    width: 100%;
+    padding: 1rem 5vw;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text--primary);
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: var(--text--primary);
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.navLinks a {
+    color: var(--text--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+    color: var(--accent);
+}
+
+.contactInfo p {
+    margin: 0.3rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.social a {
+    color: var(--text--primary);
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social a:hover {
+    color: var(--accent, #f4c10f);
+    transform: scale(1.1);
+}
+
+.footerBottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-block: 1rem;
+    font-size: 0.85rem;
+    color: var(--text--primary);
+}

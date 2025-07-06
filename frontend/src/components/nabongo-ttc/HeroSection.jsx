@@ -2,29 +2,35 @@ import styles from "../../assets/styles/nabongo-ttc/HeroSection.module.css";
 
 function HeroSection() {
   return (
-    <section className={styles.hero_section}>
+    <section className={styles.hero_section} aria-labelledby="hero-title">
       {/* Subheading */}
-      <span className={styles.hero_subtitle}>Your Subtitle</span>
+      <p className={styles.hero_subtitle}>Nabongo TTC</p>
 
       {/* Main Hero Title */}
-      <span className={styles.hero_title}>Welcome to Our Platform</span>
+      <h1 id="hero-title" className={styles.hero_title}>
+        Shaping the Next Generation of Educators
+      </h1>
 
       {/* Action Buttons */}
       <div className={styles.hero_actions}>
-        <button className={`${styles.hero_btn} ${styles.btn}`}>Get Started</button>
-        <button className={`${styles.hero_btn} ${styles.btn}`}>Learn More</button>
+        <a href="#programs" className={`${styles.hero_btn} ${styles.btn}`}>
+          Our Programs
+        </a>
+        <a href="#admissions" className={`${styles.hero_btn} ${styles.btn}`}>
+          Apply Now
+        </a>
       </div>
 
-      {/* Highlights / Statistics */}
-      <div className={styles.hero_highlights}>
+      {/* Highlights */}
+      <div className={styles.hero_highlights} aria-label="College Highlights">
         <div className={styles.highlight_box}>
-          <div className={styles.highlight_value}>6M+</div>
-          <p className={styles.highlight_text}>Users Worldwide</p>
+          <div className={styles.highlight_value}>800+</div>
+          <p className={styles.highlight_text}>Current Trainees</p>
         </div>
 
         <div className={styles.highlight_box}>
-          <div className={styles.highlight_value}>6M+</div>
-          <p className={styles.highlight_text}>Projects Completed</p>
+          <div className={styles.highlight_value}>200+</div>
+          <p className={styles.highlight_text}>Qualified Trainers</p>
         </div>
       </div>
     </section>

@@ -2,42 +2,33 @@ import logo from "../../assets/images/example.jpg";
 import styles from "../../assets/styles/nabongo-institute/HeroSection.module.css";
 
 const heroImages = [
-  { id: 1, alt: "Visual 1", src: logo },
-  { id: 2, alt: "Visual 2", src: logo },
-  { id: 3, alt: "Visual 3", src: logo },
+  { id: 1, alt: "Students collaborating", src: logo },
+  { id: 2, alt: "Modern campus building", src: logo },
+  { id: 3, alt: "Interactive learning environment", src: logo },
 ];
 
 function HeroSection() {
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} aria-labelledby="hero-title">
       {/* Left Content Area */}
       <article className={styles.hero__content}>
-        <div className={styles.hero__section_label}>Home</div>
-        <h1 className={styles.hero__title}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur
-        </h1>
-        <p className={styles.hero__description}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur sunt,
-          dolores voluptates neque optio expedita ut consequuntur possimus natus quo, aliquid
-          quidem illum numquam nemo magnam officiis minima sit.
-        </p>
+        <p className={styles.hero__section_label}>Home</p>
 
-        {/* CTA Buttons */}
-        <div className={styles.hero__actions}>
-          <button className={`${styles.hero__btn} ${styles.hero__btn_primary}`}>
-            Get started today
-            <span className={styles.hero__btn_icon} />
-          </button>
-          <button className={`${styles.hero__btn} ${styles.hero__btn_secondary}`}>
-            How it works
-          </button>
-        </div>
+        <h1 id="hero-title" className={styles.hero__title}>
+          Empowering the Next Generation of Leaders Through World-Class Education
+        </h1>
+
+        <p className={styles.hero__description}>
+          Nabongo connects learners to leading institutions and expert mentors, delivering transformative
+          education experiences that prepare you for the careers of tomorrow. Learn from the best, grow your potential,
+          and shape the future.
+        </p>
       </article>
 
       {/* Right Visual Area */}
-      <div className={styles.hero__images}>
+      <div className={styles.hero__images} role="presentation" aria-hidden="true">
         {heroImages.map(({ id, alt, src }) => (
-          <img key={id} src={src} alt={alt} />
+          <img key={id} src={src} alt={alt} className={styles.hero__image} />
         ))}
       </div>
     </section>

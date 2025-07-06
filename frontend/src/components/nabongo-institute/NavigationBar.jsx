@@ -1,25 +1,66 @@
 import styles from "../../assets/styles/nabongo-institute/NavigationBar.module.css";
 import logo from "../../assets/images/example.jpg";
+import { Link } from "react-router-dom";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHome,
+  faUniversity,
+  faUsers,
+  faBars,
+  faTimes,
+  faQuestionCircle,
+} from "@fortawesome/free-solid-svg-icons";
+
+import { useState } from "react";
 
 function NavigationBar() {
-  return (
-    <nav className={styles.navigation}>
-      {/* Brand Logo and Name */}
-      <div className={styles.nav_brand}>
-        <img className={styles.nav_logo} src={logo} alt="Company Logo" />
-        <div className={styles.nav_brand_name}>Company Name</div>
-      </div>
+  // For toggling mobile nav menu
+  const [menuOpen, setMenuOpen] = useState(false);
 
-      {/* Primary Navigation Links */}
-      <ul className={styles.nav_links}>
-        <li className={styles.nav_link}><img src={logo} alt="" /> Home</li>
-        <li className={styles.nav_link}><img src={logo} alt="" /> Institutes</li>
-        <li className={styles.nav_link}><img src={logo} alt="" /> Community</li>
+  const navItems = [
+    { href: "#home", label: "Home", icon: faHome },
+    { href: "#institutes", label: "Institutes", icon: faUniversity },
+    { href: "#faq", label: "FAQ", icon: faQuestionCircle  },
+  ];
+
+  return (
+    <nav className={styles.navigation} aria-label="Main Navigation">
+      {/* Brand Logo and Name */}
+      <Link to="/" className={styles.nav_logo_link}>
+  <div className={styles.nav_brand}>
+    <img className={styles.nav_logo} src={logo} alt="Company Logo" />
+    <span className={styles.nav_brand_name}>Nabongo</span>
+  </div>
+</Link>
+
+
+      {/* Desktop Navigation Links */}
+      <ul className={`${styles.nav_links} ${menuOpen ? styles.show : ""}`}>
+        {navItems.map((item, index) => (
+          <li key={index} className={styles.nav_link}>
+            <a
+              href={item.href}
+              className={styles.nav_link_item}
+              onClick={() => setMenuOpen(false)} // close on click
+            >
+              <FontAwesomeIcon icon={item.icon} className={styles.nav_icon} />
+              <span>{item.label}</span>
+            </a>
+          </li>
+        ))}
       </ul>
 
-      {/* Navigation Utility Button */}
+      {/* Hamburger Toggle Button */}
       <div className={styles.nav_action}>
-        <button className={styles.menu_toggle_btn}></button>
+        <FontAwesomeIcon
+          icon={menuOpen ? faTimes : faBars}
+          className={styles.menu_toggle_btn}
+          aria-label="Toggle mobile menu"
+          role="button"
+          tabIndex="0"
+          onClick={() => setMenuOpen((prev) => !prev)}
+        />
       </div>
     </nav>
   );

@@ -2,6 +2,10 @@
   padding: 4rem 2rem;
   background-color: var(--bg--primary);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Title */
@@ -23,9 +27,21 @@
 /* Team Members Grid */
 .team_members {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* tighter grid */
+  justify-content: center;
+  gap: 0.5rem; /* less spacing between cards */
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+/* Responsive */
+@media (max-width: 661px) {
+  .team_members {
+      max-width: 100%;
+
+  }
 }
 
 /* Individual Card */

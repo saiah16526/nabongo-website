@@ -1,8 +1,18 @@
-/* Removed: @import "../nabongo-institute/index.css"; */
-
 /* FAQ Container */
 .faq {
   display: block;
+}
+
+/* Grid Layout for Intro */
+.flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 661px) {
+  .flex {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Section Label */
@@ -15,21 +25,7 @@
   margin: 2rem 0 1rem;
 }
 
-/* Intro Section */
-.faq__intro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-@media (max-width: 661px) {
-  .faq__intro {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-}
-
+/* Heading + Description */
 .faq__heading {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -41,22 +37,24 @@
   margin-bottom: 2rem;
 }
 
-/* FAQ Wrapper & Items */
+/* FAQ List Wrapper */
 .faq__wrapper {
   display: block;
 }
-
 .faq__item {
   background-color: var(--card);
   padding: 1rem;
   border-radius: 10px;
   margin-bottom: 0.6rem;
   position: relative;
+  transition: background-color 0.3s ease;
+  border: 1px solid transparent;
 }
 
 .faq__question {
-  font-size: 1.5rem;
-  width: 90%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  list-style: none;
 }
 
 .faq__answer {
@@ -64,33 +62,14 @@
   border-left: 3px solid var(--border--primary);
   padding-left: 1rem;
   margin-top: 1rem;
+  color: var(--text--primary);
+}
+
+/* Only hide when details is closed */
+.faq__item:not([open]) .faq__answer {
   display: none;
 }
 
-/* Toggle Button */
-.faq__toggle {
-  border-radius: 50%;
-  background-color: transparent;
-  color: var(--text--primary);
-  border: none;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  cursor: pointer;
-}
-
-/* Active State */
 .faq__item_active {
-  background-color: var(--card--active);
-}
-
-.faq__item_active .faq__answer {
-  display: block;
-}
-
-.faq__item_active .faq__toggle {
-  background-color: var(--text--primary);
-  color: var(--bg--primary);
+  border-color: var(--border--primary);
 }

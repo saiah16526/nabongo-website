@@ -1,0 +1,141 @@
+.contactSection {
+  padding: 4rem 2rem;
+  background-color: var(--bg--primary);
+  position: relative;
+}
+
+/* Contact grid (for addresses & info) */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* Section header */
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sectionDescription {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Address/contact blocks */
+address {
+  font-style: normal; /* override default italic */
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Icons */
+.contactIcon {
+  font-size: 1.5rem;
+  color: var(--text--primary);
+  margin-bottom: 0.5rem;
+}
+
+.inlineIcon {
+  margin-right: 0.25rem;
+}
+
+/* Labels & info */
+.contactLabel {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.contactInfo {
+  margin: 0.2rem 0;
+}
+
+/* Map container */
+.mapContainer {
+  margin: 2rem 0;
+  height: 400px;
+  width: 100vw;
+  background-color: var(--card);
+  position: relative;
+  transform: translate(-50%);
+  left: 50%;
+}
+
+
+/* The form tag itself */
+.contactForm {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+/* Grouping inputs */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border--primary);
+  border-radius: 6px;
+  resize: vertical;
+  width: 100%;
+  background-color: var(--bg--secondary, #f9f9f9);
+  color: var(--text--primary);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Focus effect */
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  background-color: #fff;
+}
+
+
+/* Optional: visually hide legend but keep for screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Submit button */
+.submitButton {
+  padding: 0.75rem;
+  background-color: var(--accent);
+  color: var(--card);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+fieldset {
+border: none;}

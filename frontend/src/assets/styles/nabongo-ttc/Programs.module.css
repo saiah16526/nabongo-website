@@ -1,5 +1,5 @@
 .programs_section {
-  padding: 4rem 0rem;
+  padding: 4rem 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -9,18 +9,19 @@
 /* Section Title */
 .programs_title {
   font-size: 2rem;
-  width: 400px;
+  max-width: 600px;
   font-weight: 700;
   color: var(--text--primary);
   margin-bottom: 2.5rem;
 }
 
-/* Grid Layout for Multiple Cards */
+/* Responsive Grid Layout */
 .programs_grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 0.2rem;
   margin-top: 1rem;
+  width: 100%;
 }
 
 /* Program Card */
@@ -72,14 +73,23 @@
   color: var(--text--secondary);
 }
 
+.programs_extra {
+  background-color: var(--bg--primary);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  color: var(--text--primary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 
-/* Responsive */
-@media (max-width: 661px) {
-  .programs_grid {
-    grid-template-columns: 1fr;
-  }
-  .programs_title{
-    width: 100%;
-  }
+.programs_extra p {
+  margin-bottom: 0.75rem;
+}
 
+.programs_extra strong {
+  color: var(--text--secondary);
+  font-weight: 600;
 }

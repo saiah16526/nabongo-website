@@ -1,65 +1,76 @@
+import { useEffect, useRef } from "react";
 import styles from "../../assets/styles/nabongo-institute/FAQ.module.css";
 
 const faqItems = [
   {
     id: 1,
-    question: "Lorem ipsum dolor sit",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tempora illum",
-    active: false,
+    question: "What is Nabongo?",
+    answer: "Nabongo is an educational platform focusing on ...",
   },
   {
     id: 2,
-    question: "Lorem ipsum dolor sit",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tempora illum",
-    active: true,
+    question: "How do I register?",
+    answer: "Click the 'Register' button on the top right and follow the steps.",
   },
   {
     id: 3,
-    question: "Lorem ipsum dolor sit",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tempora illum",
-    active: false,
+    question: "Are there any free courses?",
+    answer: "Yes! We offer a range of free foundational courses to get started.",
   },
   {
     id: 4,
-    question: "Lorem ipsum dolor sit",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tempora illum",
-    active: false,
+    question: "How can I contact support?",
+    answer: "You can contact us via the 'Support' page accessible in the footer.",
   },
 ];
 
 function FAQ() {
+  const refs = useRef([]);
+
+  useEffect(() => {
+    refs.current.forEach((ref) => {
+      if (!ref) return;
+      const toggleHandler = () => {
+        if (ref.open) {
+          ref.classList.add(styles.faq__item_active);
+        } else {
+          ref.classList.remove(styles.faq__item_active);
+        }
+      };
+      ref.addEventListener("toggle", toggleHandler);
+    });
+
+    return () => {
+      refs.current.forEach((ref) => {
+        if (ref) ref.removeEventListener("toggle", () => {});
+      });
+    };
+  }, []);
+
   return (
-    <section className={styles.faq}>
-      {/* Section Title */}
-      <div className={styles.faq__section_label}>Frequently Asked Questions</div>
-
-      {/* Intro Text */}
-      <div className={styles.faq__intro}>
-        <div className={styles.faq__heading}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+    <section className={styles.faq} aria-labelledby="faq-heading">
+      <header>
+        <p className={styles.faq__section_label}>Frequently Asked Questions</p>
+        <div className={styles.flex}>
+          <h2 id="faq-heading" className={styles.faq__heading}>
+            Your Questions Answered
+          </h2>
+          <p className={styles.faq__description}>
+            Explore common questions about Nabongo and how it works.
+          </p>
         </div>
-        <p className={styles.faq__description}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur sunt,
-          dolores voluptates neque optio expedita ut consequuntur possimus natus quo, aliquid
-          quidem illum numquam nemo magnam officiis minima sit.
-        </p>
-      </div>
+      </header>
 
-      {/* FAQ Items */}
       <div className={styles.faq__wrapper}>
-        {faqItems.map(({ id, question, answer, active }) => (
-          <div
+        {faqItems.map(({ id, question, answer }, index) => (
+          <details
             key={id}
-            className={`${styles.faq__item} ${active ? styles.faq__item_active : ""}`}
+            ref={(el) => (refs.current[index] = el)}
+            className={styles.faq__item}
           >
-            <div className={styles.faq__question}>{question}</div>
-            <p className={styles.faq__answer}>{answer}</p>
-            <button className={styles.faq__toggle}>e</button>
-          </div>
+            <summary className={styles.faq__question}>{question}</summary>
+            <div className={styles.faq__answer}>{answer}</div>
+          </details>
         ))}
       </div>
     </section>

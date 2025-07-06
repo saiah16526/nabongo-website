@@ -1,48 +1,17 @@
 /* Remove global import */
 /* @import "../nabongo-institute/index.css"; */
 
-/* If you want buttons here locally scoped */
-.hero__btn {
-  padding: 0.5rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.hero__btn_primary {
-  background-color: var(--text--primary);
-  color: var(--bg--primary);
-}
-
-.hero__btn_primary .hero__btn_icon {
-  background-color: var(--bg--primary);
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  border: none;
-}
-
-.hero__btn_secondary {
-  background-color: var(--bg--primary);
-  border: 1px solid var(--border--primary);
-}
-
 /* Hero Section Layout */
 .hero {
   display: grid;
-  grid-template-columns: 0.9fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
+  /* Optional spacing between items */
+
   padding-top: 2rem;
 }
 
-@media (max-width: 661px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-}
+
 
 /* Hero Left Content */
 .hero__content {

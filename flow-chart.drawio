@@ -14,7 +14,7 @@
                         <mxPoint x="175" y="420" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="q5fqE2sdLHYFamu7BxSC-1" value="Nabongo Institute" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="q5fqE2sdLHYFamu7BxSC-1" value="Nabongo" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="110" y="90" width="130" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="q5fqE2sdLHYFamu7BxSC-4" value="Vertical Container" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">

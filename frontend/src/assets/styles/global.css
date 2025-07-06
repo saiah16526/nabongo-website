@@ -11,7 +11,10 @@
 
   --card: #ffffff;                 /* clean white card */
   --card--active: #e0f2fe;         /* subtle blue for active state */
+
+  --accent: #cbd5e1;              /* deep blue (primary accent) */
 }
+
 
 /* ==========================
    Reset & Base Styles
@@ -33,11 +36,14 @@ body {
 }
 
 html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust based on your navbar height */
   background-color: var(--bg--primary);
+  overflow-x: hidden;
 }
 
 body {
-  max-width: 1200px;
+  max-width: 1250px;
   padding: 0 5vw;
   margin: 0 auto;
 }

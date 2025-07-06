@@ -2,30 +2,38 @@ import styles from "../../assets/styles/nabongo-ttc/Associations.module.css";
 
 function Associations() {
   return (
-    <section className={styles.associations_section}>
-      <div className={styles.associations_header}>
-        <h2 className={styles.associations_title}>Our Associations</h2>
+    <section className={styles.associations_section} aria-labelledby="associations-title">
+      {/* Section Heading */}
+      <header className={styles.associations_header}>
+        <h2 id="associations-title" className={styles.associations_title}>Our Associations</h2>
         <p className={styles.associations_description}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit...
+          Nabongo TTC collaborates with national education bodies and community-focused organizations
+          to enhance teacher training and professional development across Kenya.
         </p>
-      </div>
+      </header>
 
-      <div className={styles.associations_list}>
-        <div className={`${styles.association_card}`}>
-          <i className={`${styles.association_icon}`}></i>
-          <span className={`${styles.association_name}`}>Association One</span>
-        </div>
+      {/* Associations List */}
+      <ul className={styles.associations_list} role="list">
+        <li className={styles.association_card}>
+          <i className={styles.association_icon} aria-hidden="true"></i>
+          <span className={styles.association_name}>Teachers Service Commission (TSC)</span>
+        </li>
 
-        <div className={styles.association_card}>
-          <i className={styles.association_icon}></i>
-          <span className={styles.association_name}>Association Two</span>
-        </div>
+        <li className={styles.association_card}>
+          <i className={styles.association_icon} aria-hidden="true"></i>
+          <span className={styles.association_name}>Ministry of Education Kenya</span>
+        </li>
 
-        <div className={styles.association_card}>
-          <i className={styles.association_icon}></i>
-          <span className={styles.association_name}>Association Three</span>
-        </div>
-      </div>
+        <li className={styles.association_card}>
+          <i className={styles.association_icon} aria-hidden="true"></i>
+          <span className={styles.association_name}>Kenya Institute of Curriculum Development (KICD)</span>
+        </li>
+
+        <li className={styles.association_card}>
+          <i className={styles.association_icon} aria-hidden="true"></i>
+          <span className={styles.association_name}>Kenya National Examinations Council (KNEC)</span>
+        </li>
+      </ul>
     </section>
   );
 }

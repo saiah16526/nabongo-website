@@ -1,52 +1,73 @@
+// Importing styles and a placeholder image
 import styles from "../../assets/styles/nabongo-institute/Institutes.module.css";
 import logo from "../../assets/images/example.jpg";
 
-const cards = [
-  {
-    id: 1,
-    alt: "Institution 1",
-    subtitle: "sub-title",
-    title: "title",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, tenetur non tempora e",
-  },
-  {
-    id: 2,
-    alt: "Institution 2",
-    subtitle: "sub-title",
-    title: "title",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, accusantium veniam...",
-  },
-  {
-    id: 3,
-    alt: "Institution 3",
-    subtitle: "sub-title",
-    title: "title",
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A quasi quibusdam...",
-  },
-];
+// 🧭 Import useNavigate hook from React Router for navigation
+import { useNavigate } from "react-router-dom";
 
+// This component renders the institute cards
 function Institute() {
+  // Create a navigation function instance
+  const navigate = useNavigate();
+
+  // Define the list of institutions
+  const cards = [
+    {
+      id: 1,
+      alt: "Nabongo Teachers Training College",
+      subtitle: "Professional Teaching Courses",
+      title: "Nabongo Teachers Training College",
+      text: "Nabongo TTC trains competent teachers with a strong foundation in pedagogy, early childhood development, and education management.",
+      route: "/ttc", // Navigates to the TTC page
+    },
+    {
+      id: 2,
+      alt: "Nabongo Junior Academy",
+      subtitle: "Primary Education Excellence",
+      title: "Nabongo Junior Academy",
+      text: "Nabongo Junior Academy provides holistic education to young learners, focusing on academic growth, discipline, and moral values.",
+      route: "/jr", // Navigates to the JR page
+    },
+    {
+      id: 3,
+      alt: "Nabongo Community Platform",
+      subtitle: "Collaboration & Growth",
+      title: "Nabongo Community Platform",
+      text: "The Nabongo Community Platform brings students, educators, alumni, and partners together to collaborate, share resources, and support each other through forums, events, and mentorship.",
+      route: "/", // You can change this later to the actual route (e.g. /community)
+    },
+
+  ];
+
+  // JSX to render the institute section
   return (
-    <section className={styles.institute}>
-      <div className={styles.institute__section_label}>Institutions</div>
-      <h2 className={styles.institute__heading}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur
-      </h2>
-      <p className={styles.institute__description}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur sunt, dolores voluptates
-        neque optio expedita ut consequuntur possimus natus quo, aliquid quidem illum numquam nemo magnam
-        officiis minima sit.
-      </p>
+    <section className={styles.institute} aria-labelledby="institutes-heading">
+      <header>
+        <p className={styles.institute__section_label}>Institutions</p>
+        <h2 id="institutes-heading" className={styles.institute__heading}>
+          Explore Our Partner Institutions
+        </h2>
+        <p className={styles.institute__description}>
+          We collaborate with top institutions across various disciplines to deliver quality education.
+        </p>
+      </header>
 
       <div className={styles.institute__card_box}>
-        {cards.map(({ id, alt, subtitle, title, text }) => (
-          <div className={styles.institute__card} key={id}>
-            <img src={logo} alt={alt} className={styles.institute__image} />
+        {cards.map(({ id, alt, subtitle, title, text, route }) => (
+          <article key={id} className={styles.institute__card}>
+            <figure>
+              <img src={logo} alt={alt} className={styles.institute__image} />
+            </figure>
             <div className={styles.institute__sub_title}>{subtitle}</div>
-            <div className={styles.institute__title}>{title}</div>
+            <h3 className={styles.institute__title}>{title}</h3>
             <p className={styles.institute__text}>{text}</p>
-            <button className={styles.institute__button}>link</button>
-          </div>
+            <button
+              className={styles.institute__button}
+              onClick={() => navigate(route)} // 🔁 Navigates to the selected route on click
+            >
+              Learn More
+            </button>
+          </article>
         ))}
       </div>
     </section>
