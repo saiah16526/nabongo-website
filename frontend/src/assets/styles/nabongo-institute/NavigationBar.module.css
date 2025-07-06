@@ -157,7 +157,6 @@
 .main_navigation
 {
   width: 100vw;
-  transform: translate(-50%);
   padding-inline: 1rem ;
   left: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
