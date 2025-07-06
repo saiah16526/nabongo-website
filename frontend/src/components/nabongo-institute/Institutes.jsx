@@ -64,7 +64,7 @@ function Institute() {
               className={styles.institute__button}
               onClick={() => navigate(route)} // 🔁 Navigates to the selected route on click
             >
-              Learn More
+              Visit Site
             </button>
           </article>
         ))}
