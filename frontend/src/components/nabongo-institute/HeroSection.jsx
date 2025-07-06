@@ -1,4 +1,4 @@
-import logo from "../../assets/images/example.jpg";
+import logo from "../../assets/images/example.svg";
 import styles from "../../assets/styles/nabongo-institute/HeroSection.module.css";
 
 const heroImages = [
@@ -19,9 +19,9 @@ function HeroSection() {
         </h1>
 
         <p className={styles.hero__description}>
-          Nabongo connects learners to leading institutions and expert mentors, delivering transformative
-          education experiences that prepare you for the careers of tomorrow. Learn from the best, grow your potential,
-          and shape the future.
+          Nabongo offers quality academics and practical training through accredited programs and dedicated educators, preparing learners to succeed in today’s world.
+
+
         </p>
       </article>
 

@@ -1,6 +1,6 @@
 // Importing styles and a placeholder image
 import styles from "../../assets/styles/nabongo-institute/Institutes.module.css";
-import logo from "../../assets/images/example.jpg";
+import logo from "../../assets/images/example.svg";
 
 // 🧭 Import useNavigate hook from React Router for navigation
 import { useNavigate } from "react-router-dom";
@@ -45,11 +45,10 @@ function Institute() {
       <header>
         <p className={styles.institute__section_label}>Institutions</p>
         <h2 id="institutes-heading" className={styles.institute__heading}>
-          Explore Our Partner Institutions
+          Our Diverse Institutions
         </h2>
         <p className={styles.institute__description}>
-          We collaborate with top institutions across various disciplines to deliver quality education.
-        </p>
+          From pre-primary to teacher training, our institutions offer quality education at every level.</p>
       </header>
 
       <div className={styles.institute__card_box}>

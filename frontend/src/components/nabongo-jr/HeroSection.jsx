@@ -1,13 +1,13 @@
 import styles from "../../assets/styles/nabongo-jr/HeroSection.module.css";
 
 // Import multiple logos
-import logo1 from "../../assets/images/example.jpg";
-import logo2 from "../../assets/images/example.jpg";
-import logo3 from "../../assets/images/example.jpg";
-import logo4 from "../../assets/images/example.jpg";
-import logo5 from "../../assets/images/example.jpg";
-import logo6 from "../../assets/images/example.jpg";
-import logo7 from "../../assets/images/example.jpg";
+import logo1 from "../../assets/images/example.svg";
+import logo2 from "../../assets/images/example.svg";
+import logo3 from "../../assets/images/example.svg";
+import logo4 from "../../assets/images/example.svg";
+import logo5 from "../../assets/images/example.svg";
+import logo6 from "../../assets/images/example.svg";
+import logo7 from "../../assets/images/example.svg";
 
 const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7];
 const sizes = ["large"];

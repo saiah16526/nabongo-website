@@ -71,6 +71,7 @@
 .program_attachment {
   font-size: 0.95rem;
   color: var(--text--secondary);
+  text-decoration: none;
 }
 
 .programs_extra {
@@ -92,4 +93,10 @@
 .programs_extra strong {
   color: var(--text--secondary);
   font-weight: 600;
+}
+
+.form_missing {
+  color: #c0392b; /* Rich red */
+  font-style: italic;
+  margin-top: 0.5rem;
 }

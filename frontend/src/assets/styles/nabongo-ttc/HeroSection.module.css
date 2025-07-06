@@ -1,5 +1,8 @@
 .hero_section {
-    background-image: url('../../images/example.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url('https://nabongocollegesandschools.ac.ke/wp-content/uploads/2023/02/DSC08087-scaled.jpg');
+
 
     background-size: cover;
     background-position: center;
@@ -50,38 +53,41 @@
     background-color: var(--bg--primary);
     border-radius: 10px 0px;
     position: absolute;
-    right: -1%;
+    right: 0%;
     bottom: -1%;
     display: flex;
     justify-content: center;
-    gap: 0.75rem;
     flex-wrap: wrap;
-    padding-top: 2vw;
+    padding-top: 10px;
     height: 8rem;
 }
 
 .highlight_box {
-    padding: 0rem 2vw;
-    width: 47%;
+    width: 7rem;
+    margin-left: 1vw;
+    background-color: var(--card);
+    border-radius: 10px;
 }
 
 .highlight_value {
     margin-top: 0.5rem;
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--text--primary);
     margin-bottom: 0.25rem;
+    padding-left: 0.5rem;
 }
 
 .highlight_text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--text--secondary);
+    padding-left: 0.5rem;
 }
 
 /* Responsive */
 @media (max-width: 661px) {
-  .hero_highlights {
-    width: 75%;
-    height: 7rem;
-  }
+    .hero_highlights {
+        width: 75%;
+        height: 7rem;
+    }
 }

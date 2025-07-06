@@ -1,84 +1,84 @@
 import styles from "../../assets/styles/nabongo-ttc/ContactUs.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faMapMarkerAlt,
-    faPhoneAlt,
-    faEnvelope,
+  faMapMarkerAlt,
+  faPhoneAlt,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
 function ContactUs() {
-    return (
-        <section className={styles.contactSection}>
-            <div className={styles.grid}>
-                <header className={styles.contactHeader}>
-                    <h2 className={styles.sectionTitle}>Get in Touch</h2>
-                    <p className={styles.sectionDescription}>
-                        Feel free to reach out to us with any questions or inquiries.
-                    </p>
-                </header>
+  return (
+    <section className={styles.contactSection}>
+      <div className={styles.grid}>
+        <header className={styles.contactHeader}>
+          <h2 className={styles.sectionTitle}>Get in Touch</h2>
+          <p className={styles.sectionDescription}>
+            Reach out to Nabongo Junior Academy for all inquiries about enrollment, visits, or general questions.
+          </p>
+        </header>
 
-                <address className={styles.contactItem}>
-                    <FontAwesomeIcon icon={faMapMarkerAlt} className={styles.contactIcon} />
-                    <h3 className={styles.contactLabel}>Our Address</h3>
-                    <p className={styles.contactInfo}>123 Main Street, Nairobi, Kenya</p>
-                </address>
+        <address className={styles.contactItem}>
+          <FontAwesomeIcon icon={faMapMarkerAlt} className={styles.contactIcon} />
+          <h3 className={styles.contactLabel}>Our Address</h3>
+          <p className={styles.contactInfo}>
+            P.O. BOX 1173-50200, Bungoma, Kenya
+          </p>
+        </address>
 
-                <address className={styles.contactItem}>
-                    <FontAwesomeIcon icon={faPhoneAlt} className={styles.contactIcon} />
-                    <h3 className={styles.contactLabel}>Our Contact Info</h3>
-                    <p className={styles.contactInfo}>+254 700 000 000</p>
-                    <p className={styles.contactInfo}>
-                        <FontAwesomeIcon icon={faEnvelope} className={styles.inlineIcon} /> info@example.com
-                    </p>
-                </address>
-            </div>
+        <address className={styles.contactItem}>
+          <FontAwesomeIcon icon={faPhoneAlt} className={styles.contactIcon} />
+          <h3 className={styles.contactLabel}>Our Contact Info</h3>
+          <p className={styles.contactInfo}>+254 707 122 330</p>
+          <p className={styles.contactInfo}>
+            <FontAwesomeIcon icon={faEnvelope} className={styles.inlineIcon} />{" "}
+            nabongojracademy@yahoo.com
+          </p>
+        </address>
+      </div>
 
-            <div className={styles.mapContainer}>
-                <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.636939596716!2d34.543783175840765!3d0.5463340994483362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1781d5cec9e81c05%3A0x65ef9d9af74e3b45!2sNabongo%20Junior%20Academy!5e0!3m2!1sen!2ske!4v1751794549058!5m2!1sen!2ske"
-  title="Nabongo Junior Academy Location"
-  width="100%"
-  height="100%"
-  style={{ border: 0 }}
-  allowFullScreen
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-/>
+      <div className={styles.mapContainer}>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.636939596716!2d34.543783175840765!3d0.5463340994483362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1781d5cec9e81c05%3A0x65ef9d9af74e3b45!2sNabongo%20Junior%20Academy!5e0!3m2!1sen!2ske!4v1751794549058!5m2!1sen!2ske"
+          title="Nabongo Junior Academy Location"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </div>
 
-            </div>
+      <form className={styles.contactForm}>
+        <header className={styles.formHeader}>
+          <h2 className={styles.sectionTitle}>Send Us a Message</h2>
+          <p className={styles.sectionDescription}>
+            We'd love to hear from you. Fill out the form below and we'll respond shortly.
+          </p>
+        </header>
+        <fieldset className={styles.formGroup}>
+          <legend className="sr-only">Your Information</legend>
 
+          <label htmlFor="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" required />
 
-            <form className={styles.contactForm}>
-                <header className={styles.formHeader}>
-                    <h2 className={styles.sectionTitle}>Send Us a Message</h2>
-                    <p className={styles.sectionDescription}>
-                        We’d love to hear from you. Fill out the form below and we’ll respond shortly.
-                    </p>
-                </header>
-                <fieldset className={styles.formGroup}>
-                    <legend className="sr-only">Your Information</legend>
+          <label htmlFor="phone-number">Phone Number</label>
+          <input type="tel" id="phone-number" name="phone-number" required />
 
-                    <label htmlFor="full-name">Full Name</label>
-                    <input type="text" id="full-name" name="full-name" required />
+          <label htmlFor="email-address">Email Address</label>
+          <input type="email" id="email-address" name="email-address" required />
+        </fieldset>
 
-                    <label htmlFor="phone-number">Phone Number</label>
-                    <input type="tel" id="phone-number" name="phone-number" required />
+        <fieldset className={styles.formGroup}>
+          <legend className="sr-only">Your Message</legend>
 
-                    <label htmlFor="email-address">Email Address</label>
-                    <input type="email" id="email-address" name="email-address" required />
-                </fieldset>
-
-                <fieldset className={styles.formGroup}>
-                    <legend className="sr-only">Your Message</legend>
-
-                    <label htmlFor="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                    <button type="submit" className={styles.submitButton}>Send Message</button>
-                </fieldset>
-
-            </form>
-        </section>
-    );
+          <label htmlFor="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <button type="submit" className={styles.submitButton}>Send Message</button>
+        </fieldset>
+      </form>
+    </section>
+  );
 }
 
 export default ContactUs;

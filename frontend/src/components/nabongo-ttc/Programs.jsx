@@ -1,42 +1,46 @@
 import styles from "../../assets/styles/nabongo-ttc/Programs.module.css";
 
+// Only available PDF forms
+import DSTE_Regular from "../../assets/forms/DSTE-Regular-Admission-Letter.pdf";
+import DSTE_SchoolBased from "../../assets/forms/DSTE-School-based-Admission-Form.pdf";
+
 function Programs() {
   const programsData = [
     {
-      title: "Diploma in Early Childhood Teacher Education (Regular)",
+      title: "Diploma in Primary Teacher Education (DPTE) – Regular",
       description:
-        "Three‑year full-time diploma program for early childhood educators, KCSE C+ and P1 required.",
-      attachment: "DECTE Regular Admission Form.pdf",
+        "Full-time program for aspiring primary school teachers. Entry: KCSE mean grade C plain or higher.",
+      attachment: null,
     },
     {
-      title: "Diploma in Early Childhood Teacher Education (School‑Based)",
+      title: "Diploma in Primary Teacher Education (DPTE) – School-Based",
       description:
-        "Designed for working ECDE teachers; school‑based, KCSE C+, P1 with 2 years’ service.",
-      attachment: "DECTE SchoolBased Admission Form.pdf",
+        "Designed for in-service primary teachers. Entry: KCSE C plain and P1 Certificate.",
+      attachment: null,
     },
     {
-      title: "Diploma in Primary Teacher Education (Regular)",
+      title: "Diploma in Secondary Teacher Education (DSTE) – Regular",
       description:
-        "Full-time three‑year diploma for primary school teaching, KCSE C plain required.",
-      attachment: "DPTE Regular Admission Form.pdf",
+        "Full-time program for secondary school teaching. Entry: KCSE C+ in teaching subjects.",
+      attachment: DSTE_Regular,
     },
     {
-      title: "Diploma in Primary Teacher Education (School‑Based)",
+      title: "Diploma in Secondary Teacher Education (DSTE) – School-Based",
       description:
-        "School‑based for in‑service primary teachers with KCSE C and P1 certificate.",
-      attachment: "DPTE SchoolBased Admission Form.pdf",
+        "For in-service secondary teachers. Entry: KCSE C+ and teaching experience.",
+      attachment: DSTE_SchoolBased,
     },
     {
-      title: "Diploma in Special Needs Education (Regular)",
+      title: "Diploma in Early Childhood Teacher Education (DECTE)",
       description:
-        "Regular three‑year diploma to train teachers for learners with diverse needs.",
-      attachment: "SNE Regular Admission Form.pdf",
+        "For full-time early childhood educators. Entry: KCSE C+ and P1 Certificate preferred.",
+      attachment: null,
     },
     {
-      title: "Diploma in Special Needs Education (School‑Based)",
+      title: "Business & Technical Courses – Nabongo Technical College",
       description:
-        "School‑based SNE diploma for practising teachers with P1 qualification.",
-      attachment: "SNE SchoolBased Admission Form.pdf",
+        "Covers business, accounting, ICT, and entrepreneurship. Entry varies by course.",
+      attachment: null,
     },
   ];
 
@@ -57,22 +61,33 @@ function Programs() {
             <div className={styles.program_details}>
               <h3 className={styles.program_name}>{program.title}</h3>
               <p className={styles.program_description}>{program.description}</p>
-              <a
-                href={`/forms/${program.attachment}`}
-                className={styles.program_attachment}
-                download
-                aria-label={`Download ${program.attachment}`}
-              >
-                📎 {program.attachment}
-              </a>
+
+              {program.attachment ? (
+                <a
+                  href={program.attachment}
+                  className={styles.program_attachment}
+                  download
+                  aria-label={`Download admission form for ${program.title}`}
+                >
+                  📎 {program.attachment.split("/").pop()}
+                </a>
+              ) : (
+                <p className={styles.form_missing}>
+                  Admission form currently unavailable. Please contact the administration.
+                </p>
+              )}
             </div>
           </li>
         ))}
       </ul>
 
       <div className={styles.programs_extra}>
-        <p><strong>Entry Requirements:</strong> KCSE mean grade C (plain/C+), P1 Certificate for ECDE & SNE school-based.</p>
-        <p><strong>Fee Structure (per term):</strong> Day – KSh 18,300; Boarder – KSh 29,650 (DECTE); similar scale applies to DPTE & SNE.</p>
+        <p>
+          <strong>Entry Requirements:</strong> KCSE C (plain or higher); P1 Certificate for school-based applicants.
+        </p>
+        <p>
+          <strong>Fee Structure (per term):</strong> Day Scholars – KSh 18,300; Boarders – KSh 29,650. Technical programs may vary.
+        </p>
       </div>
     </section>
   );

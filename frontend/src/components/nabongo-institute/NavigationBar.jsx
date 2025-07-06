@@ -21,18 +21,18 @@ function NavigationBar() {
   const navItems = [
     { href: "#home", label: "Home", icon: faHome },
     { href: "#institutes", label: "Institutes", icon: faUniversity },
-    { href: "#faq", label: "FAQ", icon: faQuestionCircle  },
+    { href: "#faq", label: "FAQ", icon: faQuestionCircle },
   ];
 
   return (
     <nav className={styles.navigation} aria-label="Main Navigation">
       {/* Brand Logo and Name */}
       <Link to="/" className={styles.nav_logo_link}>
-  <div className={styles.nav_brand}>
-    <img className={styles.nav_logo} src={logo} alt="Company Logo" />
-    <span className={styles.nav_brand_name}>Nabongo</span>
-  </div>
-</Link>
+        <div className={styles.nav_brand}>
+          <img className={styles.nav_logo} src={logo} alt="Company Logo" />
+          <span className={styles.nav_brand_name}>Nabongo</span>
+        </div>
+      </Link>
 
 
       {/* Desktop Navigation Links */}
@@ -51,17 +51,9 @@ function NavigationBar() {
         ))}
       </ul>
 
-      {/* Hamburger Toggle Button */}
-      <div className={styles.nav_action}>
-        <FontAwesomeIcon
-          icon={menuOpen ? faTimes : faBars}
-          className={styles.menu_toggle_btn}
-          aria-label="Toggle mobile menu"
-          role="button"
-          tabIndex="0"
-          onClick={() => setMenuOpen((prev) => !prev)}
-        />
-      </div>
+
+
+
     </nav>
   );
 }

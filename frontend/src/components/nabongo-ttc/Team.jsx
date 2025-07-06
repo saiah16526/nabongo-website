@@ -1,21 +1,22 @@
 import styles from "../../assets/styles/nabongo-ttc/Team.module.css";
-import logo from "../../assets/images/example.jpg";
+const profileImg = "https://static.vecteezy.com/system/resources/previews/036/594/092/non_2x/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg";
+import Chief_Director from "../../assets/images/Dorothy Auma Saiah.jpg"
 
 const teamMembers = [
   {
-    name: "Alice Johnson",
-    role: "Principal",
-    photo: logo,
+    name: "Dorothy Auma Saiah",
+    role: "Chief Director",
+    photo: Chief_Director,
   },
   {
     name: "Michael Kimani",
     role: "Vice Principal",
-    photo: logo,
+    photo: profileImg,
   },
   {
     name: "Sarah Wanjiku",
     role: "Head of Admissions",
-    photo: logo,
+    photo: profileImg,
   },
 ];
 

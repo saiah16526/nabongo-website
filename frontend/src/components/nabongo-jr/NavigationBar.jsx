@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "../../assets/styles/nabongo-institute/NavigationBar.module.css";
-import logo from "../../assets/images/example.jpg";
+import logo from "../../assets/images/nabongo.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -47,17 +47,6 @@ function NavigationBar() {
         </li>
       </ul>
 
-      {/* Contact CTA + Menu Button */}
-      <div className={styles.nav_action}>
-        <FontAwesomeIcon
-          icon={menuOpen ? faTimes : faBars}
-          className={styles.menu_toggle_btn}
-          aria-label="Toggle mobile menu"
-          role="button"
-          tabIndex="0"
-          onClick={() => setMenuOpen((prev) => !prev)}
-        />
-      </div>
     </nav>
   );
 }

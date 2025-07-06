@@ -108,47 +108,7 @@
   border-color: var(--text--secondary);
 }
 
-/* Call to Action (e.g., Contact Us) */
-.nav_cta {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
 
-.nav_contact_btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: var(--accent);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
-}
-
-.nav_contact_btn:hover {
-  background-color: var(--accent-dark);
-}
-
-/* Hamburger Menu Icon */
-.menu_toggle_btn {
-  font-size: 1.4rem;
-  cursor: pointer;
-  color: var(--text--primary);
-  transition: color 0.3s ease, transform 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu_toggle_btn:hover,
-.menu_toggle_btn:focus {
-  color: var(--text--secondary);
-  transform: scale(1.1);
-  outline: none;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -163,14 +123,6 @@
 }
   .nav_links {
     display: none;
-  }
-
-  .menu_toggle_btn {
-    display: inline-flex;
-  }
-
-  .nav_cta {
-    gap: 0.5rem;
   }
 
 }

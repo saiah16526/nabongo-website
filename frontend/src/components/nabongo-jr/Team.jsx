@@ -1,5 +1,8 @@
 import styles from "../../assets/styles/nabongo-jr/Team.module.css";
-import profileImg from "../../assets/images/example.jpg"; // Replace with actual image
+const profileImg = "https://static.vecteezy.com/system/resources/previews/036/594/092/non_2x/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg";
+
+<img src={profileImg} alt="Profile" />
+
 
 const teamMembers = [
   {

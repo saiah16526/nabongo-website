@@ -1,33 +1,34 @@
 import { useEffect, useState } from "react";
 import styles from "../../assets/styles/nabongo-ttc/StudentLife.module.css";
-import logo from "../../assets/images/example.jpg"; // Replace with actual images
+import logo from "../../assets/images/example.svg"; // Replace with actual images
 
 const slides = [
   {
-    title: "Cultural Week",
+    title: "Extracurricular Clubs",
     description:
-      "Celebrate student diversity with fashion, food, music, and dance. Share your heritage proudly.",
-    remarks: "Experience the richness of our community!",
+      "Engage beyond academics in clubs like Science, Debate, Environment, Writers', Drama, Music, and ICT.",
+    remarks: "Explore your passions and grow your confidence.",
     image: logo,
-    cta: "Join Performers",
+    cta: "Join a Club",
   },
   {
-    title: "Sports Day",
+    title: "Sports & Games",
     description:
-      "A full-day event for football, athletics, volleyball, and fun games. Compete or cheer with spirit.",
+      "Take part in football, athletics, volleyball, swimming (for pre-primary), and fun inter-school competitions.",
     remarks: "Show your strength on and off the field.",
     image: logo,
-    cta: "Join a Team",
+    cta: "Get Active",
   },
   {
-    title: "Academic Clubs",
+    title: "Cultural Events & Community",
     description:
-      "Get involved in clubs like Science, Debate, Environment & Writers Club. Explore your potential.",
-    remarks: "Grow your mind and confidence.",
+      "Experience cultural celebrations with music, dance, drama, and food that bring our community together.",
+    remarks: "Celebrate diversity and unity.",
     image: logo,
-    cta: "Find a Club",
+    cta: "Join the Festivities",
   },
 ];
+
 
 function StudentLife() {
   const [index, setIndex] = useState(0);
