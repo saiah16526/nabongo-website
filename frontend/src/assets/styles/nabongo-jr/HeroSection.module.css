@@ -1,8 +1,8 @@
 .hero_section {
-  padding: 4rem 0rem;
+  padding: 2rem 0rem;
   background-color: var(--bg--primary);
   text-align: center;
-  margin-block: 2rem;
+  margin-block: 1rem;
 }
 
 .hero_subtitle {
