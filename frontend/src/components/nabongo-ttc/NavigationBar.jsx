@@ -55,18 +55,17 @@ const navItems = [
       </ul>
 
       {/* CTA + Toggle Button */}
-      <div className={styles.nav_cta}>
-        <a href="#contact" className={styles.nav_contact_btn}>Contact Us</a>
-
-        <FontAwesomeIcon
-          icon={menuOpen ? faTimes : faBars}
-          className={styles.menu_toggle_btn}
-          aria-label="Toggle mobile menu"
-          role="button"
-          tabIndex="0"
-          onClick={() => setMenuOpen(prev => !prev)}
-        />
-      </div>
+      {/* Hamburger Toggle Button */}
+            <div className={styles.nav_action}>
+              <FontAwesomeIcon
+                icon={menuOpen ? faTimes : faBars}
+                className={styles.menu_toggle_btn}
+                aria-label="Toggle mobile menu"
+                role="button"
+                tabIndex="0"
+                onClick={() => setMenuOpen((prev) => !prev)}
+              />
+            </div>
     </nav>
   );
 }

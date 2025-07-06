@@ -1,17 +1,20 @@
+import React, { useState } from "react";
 import styles from "../../assets/styles/nabongo-institute/NavigationBar.module.css";
 import logo from "../../assets/images/example.jpg";
 import { Link } from "react-router-dom";
-
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHouse,        // Home
-  faSchool,       // Student Life
-  faUserTie,      // Team
-  faEnvelope,     // Contact
+  faHouse,
+  faSchool,
+  faUserTie,
+  faEnvelope,
+  faBars,
+  faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 
 function NavigationBar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav id="main-navigation" className={styles.main_navigation} aria-label="Main Navigation">
       {/* Brand Section */}
@@ -21,8 +24,6 @@ function NavigationBar() {
           <span className={styles.nav_brand_name}>Nabongo</span>
         </div>
       </Link>
-
-
 
       {/* Navigation Links */}
       <ul className={styles.nav_links}>
@@ -46,12 +47,16 @@ function NavigationBar() {
         </li>
       </ul>
 
-      {/* Contact CTA */}
-      <div className={styles.nav_cta}>
-        <a href="#contact" className={styles.nav_contact_btn}>
-          <FontAwesomeIcon icon={faEnvelope} className={styles.nav_icon} />
-          <span>Contact Us</span>
-        </a>
+      {/* Contact CTA + Menu Button */}
+      <div className={styles.nav_action}>
+        <FontAwesomeIcon
+          icon={menuOpen ? faTimes : faBars}
+          className={styles.menu_toggle_btn}
+          aria-label="Toggle mobile menu"
+          role="button"
+          tabIndex="0"
+          onClick={() => setMenuOpen((prev) => !prev)}
+        />
       </div>
     </nav>
   );
