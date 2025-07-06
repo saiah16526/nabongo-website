@@ -1,5 +1,6 @@
 .hero_section {
-    background-image: url(D:\nabongo-website\frontend\src\assets\images\example.jpg);
+    background-image: url('../../assets/images/example.jpg');
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
