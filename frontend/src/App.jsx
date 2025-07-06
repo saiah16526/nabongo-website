@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import NabongoInstitute from "./pages/Nabongo-Institute";
-import NabongoTTC from "./pages/Nabongo-ttc";
+import NabongoTTC from "./pages/Nabongo-TTC";
 import NabongoJr from "./pages/Nabongo-Jr";
 
 function App() {
