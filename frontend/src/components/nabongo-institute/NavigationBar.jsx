@@ -1,5 +1,5 @@
 import styles from "../../assets/styles/nabongo-institute/NavigationBar.module.css";
-import logo from "../../assets/images/example.jpg";
+import logo from "../../assets/images/nabongo.png";
 import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
