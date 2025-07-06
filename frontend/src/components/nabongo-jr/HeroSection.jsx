@@ -10,7 +10,7 @@ import logo6 from "../../assets/images/example.jpg";
 import logo7 from "../../assets/images/example.jpg";
 
 const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7];
-const sizes = ['small', 'medium', 'large'];
+const sizes = ["large"];
 
 function HeroSection() {
   return (
